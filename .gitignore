@@ -10,4 +10,5 @@ coverage/
 tsconfig.tsbuildinfo
 
 
-.chat/
+.chat
+daily_reports
