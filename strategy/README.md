@@ -24,6 +24,7 @@ The core methodology comes from the screenshots in `../ref/`:
 3. Use `signals.md` to convert data and market behavior into green, yellow, orange, or red actions.
 4. For a new company, copy `templates/company-research.md` into a company note and fill it out.
 5. Each month, copy `templates/monthly-review.md` and run a portfolio review.
+6. When creating slide-like visuals, use `visual-breakdowns.md` to keep the output focused and readable.
 
 ## Default Strategy
 
@@ -38,5 +39,6 @@ The core methodology comes from the screenshots in `../ref/`:
 - `core-methodology.md`: definitions for structural change, L layers, T tiers, and scoring.
 - `portfolio-construction.md`: allocation ranges, sizing rules, cash rules, and rebalance workflow.
 - `signals.md`: traffic-light signal system and action mapping.
+- `visual-breakdowns.md`: rules for concise company breakdown visuals.
 - `templates/company-research.md`: company analysis template.
 - `templates/monthly-review.md`: recurring portfolio review template.

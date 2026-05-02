@@ -29,10 +29,12 @@ For company research:
 
 1. Classify the company across L1-L5 using `strategy/core-methodology.md`.
 2. Assign a T tier using the tactical posture rules.
-3. Score structural fit using the six scoring categories.
+3. Explain the core business, strategic wedge, strategy, vision, and future path.
 4. Evaluate signal state using `strategy/signals.md`.
 5. Produce a concrete action: Add, Hold, Trim, Pause, Exit, or Watchlist.
 6. Use `strategy/templates/company-research.md` when creating a reusable company note.
+
+Keep company notes focused, but do not compress away the strategic wedge. Include detailed scoring, long financial tables, or exhaustive risk lists only when they directly change the L layer, T tier, signal color, or action.
 
 For portfolio reviews:
 
@@ -71,9 +73,11 @@ Every investment analysis should include:
 
 - L layer and T tier.
 - Current signal color.
-- Structural thesis.
-- Valuation discipline note.
-- Key risks.
+- Core business.
+- Strategic wedge.
+- Strategy.
+- Vision.
+- Future path.
 - Action and trigger that would change the action.
 
 Prefer concise Markdown. Use tables when comparing holdings, layers, scores, or signals.

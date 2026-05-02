@@ -70,3 +70,15 @@ Classify every new event before acting:
 | Thesis break | Lost moat, failed commercialization, permanent margin damage, fraud, liquidity stress | Exit or move to watchlist |
 
 The default rule is: do not trade noise. Trade only signal changes, valuation dislocations, or thesis changes.
+
+## Visual Breakdown Rule
+
+Company visuals should be decision artifacts, not full research notes. Use the research note for sources, detailed evidence, and edge cases. Use the visual to show only:
+
+- Primary L layer and T tier.
+- One-line thesis.
+- Layer allocation or layer exposure.
+- Current signal and action.
+- Three to five triggers that change the decision.
+
+If a detail does not change position size, layer assignment, T tier, or signal color, keep it out of the visual.

@@ -1,4 +1,4 @@
-# Company Research Template
+# Company Strategic Brief Template
 
 ## Company
 
@@ -8,9 +8,9 @@
 - Analyst:
 - Current action: Watchlist / Start / Add / Hold / Trim / Exit
 
-## One-Line Thesis
+## One-Line View
 
-Write one sentence explaining why this company should compound value through the AI cycle.
+Write one sentence explaining what the company is, why it matters, and how it should be treated in the portfolio.
 
 ## L/T Classification
 
@@ -19,83 +19,78 @@ Write one sentence explaining why this company should compound value through the
 - T tier:
 - Current signal: Green / Yellow / Orange / Red
 
-## Structural Fit Score
+## Core Business
 
-| Category | Score 1-5 | Notes |
-| --- | ---: | --- |
-| Layer clarity |  |  |
-| Value capture |  |  |
-| Data quality |  |  |
-| Moat |  |  |
-| AI cycle health |  |  |
-| Valuation discipline |  |  |
-| Total |  |  |
+Focus only on the business lines that drive the investment thesis.
 
-Interpretation:
+- What the company sells:
+- Who buys it:
+- Where profit is likely captured:
+- What business line matters most:
 
-- 25-30: core candidate.
-- 19-24: watch, stage in, or hold with defined triggers.
-- 13-18: tactical or theme-only exposure.
-- 12 or below: avoid unless clearly asymmetric.
+## Strategic Wedge
 
-## Business Breakdown
+Name the one differentiated mechanism that makes the company strategically interesting. This is the detail that must not be compressed away.
 
-- Revenue drivers:
-- Margin drivers:
-- Capital intensity:
-- Customer adoption:
-- Competitive position:
-- Key dependencies:
+- Wedge:
+- Why it matters:
+- What would prove it:
+- What would disprove it:
 
-## AI Layer Map
+## Strategy
 
-| Layer | Exposure | Evidence | Importance |
-| --- | --- | --- | --- |
-| L1 Physical infrastructure |  |  |  |
-| L2 Digital infrastructure |  |  |  |
-| L3 Core intelligence |  |  |  |
-| L4 AI applications |  |  |  |
-| L5 Frontier exploration |  |  |  |
+Explain the company's strategic direction in plain language.
 
-## Valuation
+- Strategic priority:
+- Main growth engine:
+- Main constraint:
+- Competitive wedge:
 
-- Current valuation:
-- Growth expectation embedded in price:
-- What must go right:
-- What could make the stock cheap:
-- What could make the stock expensive:
+## Vision
 
-## Signals
+State the long-term future the company is trying to build.
 
-| Input | State | Evidence |
+- What management appears to be aiming for:
+- What must become true for the vision to work:
+- What would make the company strategically more important:
+
+## Future
+
+Identify the few future events that matter most.
+
+- Next major catalyst:
+- Upside path:
+- Downside path:
+- What would change the L/T tier:
+
+## L/T Map
+
+| Layer | Exposure | Importance |
 | --- | --- | --- |
-| Hard data | Green / Yellow / Orange / Red |  |
-| Market emotion | Green / Yellow / Orange / Red |  |
-| Valuation | Green / Yellow / Orange / Red |  |
-| Structural evidence | Green / Yellow / Orange / Red |  |
-| Overall signal | Green / Yellow / Orange / Red |  |
-
-## Risks
-
-- Thesis risk:
-- Valuation risk:
-- Competition risk:
-- Execution risk:
-- Macro or regulatory risk:
-
-## Position Plan
-
-- Intended role: Core / Growth engine / Theme / Frontier option / Watchlist
-- Initial size:
-- Target size:
-- Max size:
-- Add triggers:
-- Trim triggers:
-- Exit triggers:
+| L1 Physical infrastructure |  |  |
+| L2 Digital infrastructure |  |  |
+| L3 Core intelligence |  |  |
+| L4 AI applications |  |  |
+| L5 Frontier exploration |  |  |
 
 ## Decision
 
 - Action:
-- Reason:
-- Next review date:
-- Trigger that changes this decision:
+- Why:
+- Initial size:
+- Max size:
+- Add trigger:
+- Trim trigger:
+- Exit trigger:
+
+## Key Facts To Keep
+
+Limit this section to 3-5 facts that directly support the thesis.
+
+- Fact:
+- Fact:
+- Fact:
+
+## Sources
+
+- Source:

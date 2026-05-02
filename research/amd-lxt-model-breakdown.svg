@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1350" viewBox="0 0 2400 1350">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07121c"/>
+      <stop offset="1" stop-color="#101821"/>
+    </linearGradient>
+    <style>
+      .title { font-family: Arial, Helvetica, sans-serif; font-size: 82px; font-weight: 800; fill: #f5f8ff; }
+      .subtitle { font-family: Arial, Helvetica, sans-serif; font-size: 34px; font-weight: 650; fill: #b8c6d8; }
+      .section { font-family: Arial, Helvetica, sans-serif; font-size: 34px; font-weight: 800; fill: #78e8ff; }
+      .layerTitle { font-family: Arial, Helvetica, sans-serif; font-size: 34px; font-weight: 850; fill: #ffffff; }
+      .body { font-family: Arial, Helvetica, sans-serif; font-size: 25px; font-weight: 650; fill: #d2dce9; }
+      .muted { font-family: Arial, Helvetica, sans-serif; font-size: 22px; font-weight: 650; fill: #9fb0c2; }
+      .weight { font-family: Arial, Helvetica, sans-serif; font-size: 34px; font-weight: 900; fill: #70ff8c; }
+      .action { font-family: Arial, Helvetica, sans-serif; font-size: 31px; font-weight: 900; fill: #ffd35c; }
+      .small { font-family: Arial, Helvetica, sans-serif; font-size: 21px; font-weight: 650; fill: #bdcad8; }
+    </style>
+  </defs>
+
+  <rect width="2400" height="1350" fill="url(#bg)"/>
+  <g opacity="0.16" stroke="#4c77ff" stroke-width="3" fill="none">
+    <path d="M0 155 H260 L335 85 H640"/>
+    <path d="M1725 45 H2120 L2200 125 H2400"/>
+    <path d="M0 1195 H430 L510 1270 H915"/>
+  </g>
+
+  <text x="90" y="118" class="title">用 LxT 模型拆解 AMD</text>
+  <text x="92" y="174" class="subtitle">结论先行: AMD 的核心是 CPU + GPU + rack-scale AI infra, 但还不是自动 T1 核心仓。</text>
+
+  <g transform="translate(90 238)">
+    <rect x="0" y="0" width="1440" height="70" rx="16" fill="#132334" stroke="#28506e"/>
+    <text x="34" y="46" class="section">L 维度: AMD 的五层价值暴露</text>
+  </g>
+
+  <g transform="translate(90 340)">
+    <rect x="0" y="0" width="1380" height="135" rx="18" fill="#132a2a" stroke="#0e9f86" stroke-width="3"/>
+    <text x="36" y="54" class="layerTitle">L5 前沿探索</text>
+    <text x="36" y="93" class="body">HPC / Sovereign AI / Space-grade FPGA</text>
+    <text x="1170" y="78" class="weight">0-5%</text>
+
+    <rect x="0" y="163" width="1380" height="150" rx="18" fill="#1f1830" stroke="#745bff" stroke-width="3"/>
+    <text x="36" y="218" class="layerTitle">L4 AI 应用</text>
+    <text x="36" y="258" class="body">AI PC + embedded/edge AI, 但不拥有多数终端应用</text>
+    <text x="1145" y="248" class="weight">10-15%</text>
+
+    <rect x="0" y="343" width="1380" height="150" rx="18" fill="#2a1930" stroke="#ff4fb4" stroke-width="3"/>
+    <text x="36" y="398" class="layerTitle">L3 核心智能</text>
+    <text x="36" y="438" class="body">训练/推理底座; ROCm 是能否升维的关键</text>
+    <text x="1145" y="428" class="weight">15-20%</text>
+
+    <rect x="0" y="523" width="1380" height="170" rx="18" fill="#2e250f" stroke="#ffbd32" stroke-width="4"/>
+    <text x="36" y="583" class="layerTitle">L2 数字基础设施 [CORE]</text>
+    <text x="36" y="625" class="body">EPYC CPU + Instinct GPU + Helios: 系统级 AI 基建</text>
+    <text x="1130" y="615" class="weight">60-70%</text>
+
+    <rect x="0" y="723" width="1380" height="135" rx="18" fill="#0e2b2a" stroke="#15d8d3" stroke-width="3"/>
+    <text x="36" y="778" class="layerTitle">L1 物理基础设施</text>
+    <text x="36" y="817" class="body">Fabless 依赖: TSMC / HBM / advanced packaging / power</text>
+    <text x="1170" y="803" class="weight">风险项</text>
+  </g>
+
+  <g transform="translate(1585 238)">
+    <rect x="0" y="0" width="725" height="960" rx="24" fill="#121f2d" stroke="#2c526f" stroke-width="3"/>
+    <text x="42" y="70" class="section">T 维度: 怎么操作</text>
+
+    <rect x="42" y="116" width="640" height="96" rx="16" fill="#2f2611" stroke="#ffbd32"/>
+    <text x="70" y="176" class="action">T2 增长引擎</text>
+    <text x="410" y="176" class="action">信号: 黄绿</text>
+
+    <text x="42" y="278" class="layerTitle">当前姿态</text>
+    <text x="42" y="324" class="body">先分段观察, 不一次打满</text>
+    <text x="42" y="364" class="body">3-6% 起步; T2 上限 10%</text>
+
+    <text x="42" y="452" class="layerTitle">升 T1 条件</text>
+    <text x="42" y="498" class="body">EPYC 带动 Instinct attach</text>
+    <text x="42" y="538" class="body">MI450 / Helios 按期兑现</text>
+    <text x="42" y="578" class="body">ROCm 摩擦显著下降</text>
+
+    <text x="42" y="666" class="layerTitle">降权条件</text>
+    <text x="42" y="712" class="body">GPU 预期透支</text>
+    <text x="42" y="752" class="body">毛利被供给或出口限制压缩</text>
+    <text x="42" y="792" class="body">数据中心增速失速</text>
+
+    <rect x="42" y="850" width="640" height="70" rx="14" fill="#182d24" stroke="#40df7b"/>
+    <text x="72" y="895" class="small">结构分: 26/30 | 主标签: L2/T2 | 下一触发: Q1 2026</text>
+  </g>
+
+  <g transform="translate(90 1240)">
+    <text x="0" y="0" class="action">一句话: AMD 买的是 CPU+GPU 系统级 AI 基建第二供给源, 不是完整 AI 帝国。</text>
+    <text x="0" y="45" class="muted">详细证据、来源、风险和触发条件见 research/amd-lxt-model-breakdown.md</text>
+  </g>
+</svg>
