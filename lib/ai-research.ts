@@ -1,6 +1,9 @@
 import "server-only";
 
 import { execFile } from "node:child_process";
+import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import os from "node:os";
+import path from "node:path";
 import { promisify } from "node:util";
 import { ACTIONS, LAYERS, SCORE_CATEGORIES, SIGNALS, T_TIERS, type Action, type LayerId, type Signal, type TTier } from "./constants";
 import { parseAiResearchJson } from "./ai-research-parse";
@@ -250,8 +253,11 @@ async function runLocalCommand(command: string, args: string[], timeoutMs = 2400
     });
     return [result.stdout, result.stderr].filter(Boolean).join("\n");
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Local AI command failed.";
-    throw new Error(message);
+    const details = error as Error & { stdout?: string; stderr?: string; code?: number | string };
+    const output = [details.stderr, details.stdout].filter(Boolean).join("\n").trim();
+    const message = details.message || "Local AI command failed.";
+    const code = details.code ? `exit ${details.code}` : "unknown exit";
+    throw new Error(`${message} (${code})${output ? `\n${output.slice(0, 2000)}` : ""}`);
   } finally {
     clearTimeout(timeout);
   }
@@ -260,16 +266,31 @@ async function runLocalCommand(command: string, args: string[], timeoutMs = 2400
 export async function researchCompanyWithCodex(query: string): Promise<AiResearchResult> {
   const command = process.env.CODEX_COMMAND || "codex";
   const prompt = researchPrompt(query);
-  const output = await runLocalCommand(command, [
-    "exec",
-    "--search",
-    "--sandbox",
-    "read-only",
-    "--ask-for-approval",
-    "never",
-    prompt
-  ]);
-  return parseAiResearchJson(output);
+  const tempDir = await mkdtemp(path.join(os.tmpdir(), "invest-codex-research-"));
+  const schemaPath = path.join(tempDir, "schema.json");
+  const outputPath = path.join(tempDir, "result.json");
+
+  try {
+    await writeFile(schemaPath, JSON.stringify(researchJsonSchema), "utf8");
+    const output = await runLocalCommand(command, [
+      "--search",
+      "-a",
+      "never",
+      "exec",
+      "--ephemeral",
+      "--sandbox",
+      "read-only",
+      "--output-schema",
+      schemaPath,
+      "--output-last-message",
+      outputPath,
+      prompt
+    ]);
+    const lastMessage = await readFile(outputPath, "utf8").catch(() => "");
+    return parseAiResearchJson(lastMessage || output);
+  } finally {
+    await rm(tempDir, { recursive: true, force: true });
+  }
 }
 
 export async function researchCompanyWithClaude(query: string): Promise<AiResearchResult> {

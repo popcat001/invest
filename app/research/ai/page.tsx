@@ -1,5 +1,4 @@
-import { Sparkles } from "lucide-react";
-import { runAiResearchAction } from "@/app/actions";
+import { AiResearchForm } from "./form";
 
 export default async function AiResearchPage({ searchParams }: { searchParams: Promise<{ error?: string }> }) {
   const { error } = await searchParams;
@@ -21,21 +20,7 @@ export default async function AiResearchPage({ searchParams }: { searchParams: P
           </div>
           <div className="panel-body">
             {error ? <p className="alert">{error}</p> : null}
-            <form action={runAiResearchAction} className="ai-search-form">
-              <label>
-                Company or ticker
-                <input name="query" placeholder="NVDA, Microsoft, TSMC..." required autoFocus />
-              </label>
-              <label>
-                Engine
-                <select name="provider" defaultValue="openai">
-                  <option value="openai">OpenAI API</option>
-                  <option value="codex">Codex CLI</option>
-                  <option value="claude">Claude Code</option>
-                </select>
-              </label>
-              <button className="primary" type="submit"><Sparkles size={16} /> Run research</button>
-            </form>
+            <AiResearchForm />
           </div>
         </div>
 
